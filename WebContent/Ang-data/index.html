@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <!-- Include bootstrap CSS -->
+    <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="includes/style.css" rel="stylesheet">
+      <link rel="stylesheet"  href="includes/slider/lightslider.css"/>
+</head>
+ <script src="includes/jquery/jquery-2.1.0.min.js"></script>
+    <script src="includes/slider/lightslider.js"></script> 
+    <script src="includes/bootstrap/js/bootstrap.min.js"></script>
+   <script src="includes/js/userscripts.js"></script>
+     <script src="includes/js/angular.min.js"></script>
+<script src="includes/controllers/controller.js"></script>
+<body>
+<div class="container" ng-controller="AppCtrl">
+    <!-- Site header and navigation -->
+    <header class="top" role="header">
+    <div class="pull-right">
+
+           <a href="#" class="marginleftpuller">
+               Welcome {{userid}} <span class="glyphicon glyphicon-user"> </span>   
+            </a>
+<br>
+           <a href="#" class="">
+            Manage Profile </a>
+         |
+           <a href="#" class="marginleftpuller">
+             Logout </a>
+            </div>
+         <div class="container" >
+            <a href="#" class="navbar-brand pull-left">
+               Noor-e-Iman
+            </a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </button>
+            <nav class="navbar-collapse collapse" role="navigation">
+                <ul class="navbar-nav nav">
+                    <li><a href="#">Preface</a></li>
+                    <li><a href="#">Topics</a></li>
+                    <li><a href="#">Hasd-ah-Ayaat</a></li>
+                    <li><a href="#">Faraiz-e-Vilayat</a></li>
+                    <li><a href="#">Featured-Ayats</a></li>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <!-- Site banner -->
+    <div class="banner">
+        <div class="container">
+           <div class="demo">
+                    <div class="clearfix" >
+                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                    <li data-thumb="img/thumb/cS-1.jpg"> 
+                        <img src="img/cS-1.jpg" />
+                         </li>
+                   <!--  <li data-thumb="img/thumb/cS-2.jpg"> 
+                        <img src="img/cS-2.jpg" />
+                         </li>
+                    <li data-thumb="img/thumb/cS-2.jpg"> 
+                        <img src="img/cS-3.jpg" />
+                         </li> -->
+                    
+                </ul>
+            </div>
+            </div>
+    </div>
+  </div>
+    <!-- Middle content section -->
+    <div class="middle">
+        <div class="container" >
+      
+            <div class="col-md-4">
+                <h2>Ayat Lookup</h2>
+                <div class="spacetop">
+                <div class="row "> 
+             <div> <label>Chapter</label><select class="pulldown "> <option> 1 </option> <option> 2 </option> </select>  </div>
+             <br> <br>
+              <div class="row pullrt1"> 
+                <label>Verse</label><select class="pulldown " > <option> 1 </option><option> 2 </option> </select> </div> </div>
+              <br> 
+             <div class="row pullrt2">  <input type="submit" class="btn btn-danger " value="Read"> </input> </div>
+             </div>
+            </div>
+                  <div class="col-md-8 content">
+            <h2>Surah List</h2>
+            <div  ng-repeat="data in surahlist">
+               <p><b>Chapter no: {{data.surahnumber}}   Surah Name: {{data.surahname}}</p>
+             
+                <p><b>Transliteration: </b>{{data.translation}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site footer -->
+    <div class="bottom">
+        <div class="container">
+            <div class="col-md-4">
+                <h3><span class="glyphicon glyphicon-pencil"></span> About </h3>
+                <ul class="footercolor">
+                <li>Islam</li>
+                <li>Mehdaviath</li>
+                </ul>
+            </div>
+            
+            <div class="col-md-4">
+                <h3><span class="glyphicon glyphicon-envelope"></span> Contact </h3>
+               <ul class="footercolor">
+                <li>Maulana Abid Khundmiri</li>
+                <li>For a Copy</li>
+                <li>Publishing Team</li>
+                <li>Technical Team</li>
+
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3><span class="glyphicon glyphicon-dashboard"></span> Links</h3>
+                <ul class="footercolor">
+                <li>Khalifatullah Mehdi</li>
+                <li>Promised Mehdi</li>
+                <li>Nooriana</li>
+                <li>Mehdavia Blogs</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include jQuery and bootstrap JS plugins -->
+ 
+</div>
+</body>
+</html>
