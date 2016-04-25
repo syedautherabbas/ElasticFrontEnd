@@ -1,4 +1,6 @@
 <!-- Site banner -->
+
+
     <div class="banner">
         <div class="container">
            <div class="demo">
@@ -27,12 +29,12 @@
                 <h2>Ayat Lookup</h2>
                 <div class="spacetop">
                 <div class="row "> 
-             <div> <label>Chapter</label><select class="pulldown "> <option> 1 </option> <option> 2 </option> </select>  </div>
+             <div> <label>Chapter</label><select class="pulldown " ng-model="ayat.chapter"> <option> 1 </option> <option> 2 </option> </select>  </div>
              <br> <br>
               <div class="row pullrt1"> 
-                <label>Verse</label><select class="pulldown " > <option> 1 </option><option> 2 </option> </select> </div> </div>
+                <label>Verse</label><select class="pulldown " ng-model="ayat.verse" > <option> 1 </option><option> 2 </option> </select> </div> </div>
               <br> 
-             <div class="row pullrt2">  <input type="submit" class="btn btn-danger " value="Read"> </input> </div>
+             <div class="row pullrt2">  <input type="submit" class="btn btn-danger " value="Read" ng-click="displaychapter()"> </input> </div>
              </div>
             </div>
                   <div class="col-md-8 content">

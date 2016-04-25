@@ -59,6 +59,13 @@ console.log('CTRL 111111111');
 refresh();
 
 
+$scope.displaychapter = function() {
+
+  for (ayat in $scope.ayat)
+   console.log("DISPLAY SURAH!! "+ayat.chapter);
+  
+}
+
 
 
 }]);﻿
@@ -107,10 +114,6 @@ var refresh = function() {
 console.log('ctrl2222222222222!');
 refresh();
 
-$scope.displaychapter = function() {
-   console.log("DISPLAY SURAH!! "+$scope.chapter);
-  
-}
 
 
 
