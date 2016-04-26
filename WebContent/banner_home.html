@@ -29,12 +29,17 @@
                 <h2>Ayat Lookup</h2>
                 <div class="spacetop">
                 <div class="row "> 
-             <div> <label>Chapter : </label><input type="text" ng-model="ayat.chapter"></input>  </div>
-             <br> <br>
-              <div class="row pullrt1"> 
-                <label>Verse</label><input type="text" ng-model="ayat.verse"></input></div> </div>
+                <div class="form-group">
+  <label for="usr">Chapter:</label>
+  <input type="text" class="form-control" ng-model="ayat.chapter" id="usr">
+</div>
+             
+            <div class="form-group">
+  <label for="usr">Verse:</label>
+  <input type="text" class="form-control" ng-model="ayat.verse" id="usr">
+</div>
               <br> 
-             <div class="row pullrt2">  <input type="submit" class="btn btn-danger " value="Read" ng-click="displaychapter()"> </input> </div>
+             <div class="row pullrt2">   <a ng-href="#/surah/{{ayat.chapter}}/ayat/{{ayat.verse}}" class="btn btn-danger " value="Read" ng-click="displaychapter()"> Read</a> </div>
              </div>
             </div>
                   <div class="col-md-8 content">

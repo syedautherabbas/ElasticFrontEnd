@@ -5,13 +5,13 @@
                   
            
            <h2 class="text-center">Surah : {{surah.surahname}}  </h2>
- <div  ng-repeat="data in ayatlist" class="row panel bgltblue">
+ <div   class="row panel bgltblue">
  
                
-                       <div class="arabicdisplay row text-right"><b> {{data.ayat}}   </b>    </div>
+                       <div class="arabicdisplay row text-right"><b> {{ayat.ayat}}   </b>    </div>
                        
                                <div class="arabicdisplay row text-right"> </div>
- <div class="row versechapter">{{data.chapter}}: {{data.verse}}   {{data.translation}}</div>  
+ <div class="row versechapter">{{ayat.chapter}}: {{ayat.verse}}   {{ayat.translation}}</div>  
 <!--   <div class="arabicdisplay row "> Noor-e-iman Tafseer text </div>           -->
      
                 </div>

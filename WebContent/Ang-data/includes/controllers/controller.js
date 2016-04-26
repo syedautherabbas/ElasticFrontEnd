@@ -6,19 +6,28 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 
 	$stateProvider
 
-	// HOME STATES AND NESTED VIEWS ========================================
+	// HOME STATE========================================
 	.state('home', {
 		url : '/home',
 		templateUrl : 'banner_home.html',
 		controller : 'AppCtrl'
 	})
 
-	// ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-	.state('ayatreader', {
+	// Ayats according to surah  =================================
+	.state('surahreader', {
 		url : '/surah/:sid',
-		templateUrl : 'ayatreader.html',
+		templateUrl : 'surahreader.html',
 		controller : 'AppCtrl2'
-	});
+	})
+	
+	//surah and ayat chosen by user 
+	.state('ayatreader', {
+		url : '/surah/:sid/ayat/:aid',
+		templateUrl : 'ayatreader.html',
+		controller : 'AppCtrl3'
+	})
+	
+	;
 
 });
 
@@ -125,3 +134,65 @@ myApp
 							refresh();
 
 						} ]);
+
+
+
+
+myApp
+.controller(
+		'AppCtrl3',
+		[
+				'$scope',
+				'$http',
+				'$stateParams',
+				function($scope, $http, $stateParams) {
+
+					console.log("controller 3" + $stateParams.sid+"surah "+$stateParams.aid+" ayat");
+
+
+//					}
+
+					var refresh = function() {
+
+						// username get call
+
+						// ayat data get call
+
+						$http
+								.get(
+										'http://localhost:8080/Noor-E-Iman/Quran/surah/'
+												+ $stateParams.sid
+												+ '/ayat/'+$stateParams.aid )
+								.success(
+										function(response) {
+											console
+													.log("GET  REQ FOR surah 's ayats  SUCCESS ");
+
+											$scope.ayat = response;
+
+										});
+						
+						
+						$http
+						.get(
+								'http://localhost:8080/Noor-E-Iman/Quran/surah/'
+										+ $stateParams.sid
+										)
+						.success(
+								function(response) {
+									console
+											.log("GET  REQ FOR surah name success");
+
+									$scope.surah = response;
+
+								});
+						
+			
+
+					};
+
+					console.log('ctrl3333333333!');
+					refresh();
+
+				} ]);
+
