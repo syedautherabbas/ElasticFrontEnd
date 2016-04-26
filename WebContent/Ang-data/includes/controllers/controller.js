@@ -68,6 +68,38 @@ myApp
 								console.log($scope.ayat);
 
 							}
+							
+							$scope.onsurahselect = function() {
+								
+								var temp1 = $scope.ayat;
+//								var temp2=temp1.chapter.split(':');
+							var surahNumber=temp1.chapter;
+							console.log(surahNumber+" on surah change")
+							
+							$http
+							.get(
+									'http://localhost:8080/Noor-E-Iman/Quran/surah/'
+											+ surahNumber
+											+ '/list')
+							.success(
+									function(response) {
+										console
+												.log("GET  REQ FOR no of ayats in surah success ");
+
+										$scope.ayatlist = response;
+
+									});
+
+							}
+							
+							
+
+						
+							
+
+							
+							
+							
 
 						} ]);
 myApp
