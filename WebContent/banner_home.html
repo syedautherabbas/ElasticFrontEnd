@@ -23,25 +23,25 @@
   </div>
     <!-- Middle content section -->
     <div class="middle">
-<!--         <div class="container" > -->
+        <div class="container" >
       
-<!--             <div class="col-md-4"> -->
-<!--                 <h2>Ayat Lookup</h2> -->
-<!--                 <div class="spacetop"> -->
-<!--                 <div class="row ">  -->
-<!--              <div> <label>Chapter : </label><input type="text" ng-model="ayat.chapter"></input>  </div> -->
-<!--              <br> <br> -->
-<!--               <div class="row pullrt1">  -->
-<!--                 <label>Verse</label><input type="text" ng-model="ayat.verse"></input></div> </div> -->
-<!--               <br>  -->
-<!--              <div class="row pullrt2">  <input type="submit" class="btn btn-danger " value="Read" ng-click="displaychapter()"> </input> </div> -->
-<!--              </div> -->
-<!--             </div> -->
-<!--                   <div class="col-md-8 content"> -->
+            <div class="col-md-4">
+                <h2>Ayat Lookup</h2>
+                <div class="spacetop">
+                <div class="row "> 
+             <div> <label>Chapter : </label><input type="text" ng-model="ayat.chapter"></input>  </div>
+             <br> <br>
+              <div class="row pullrt1"> 
+                <label>Verse</label><input type="text" ng-model="ayat.verse"></input></div> </div>
+              <br> 
+             <div class="row pullrt2">  <input type="submit" class="btn btn-danger " value="Read" ng-click="displaychapter()"> </input> </div>
+             </div>
+            </div>
+                  <div class="col-md-8 content">
            
            
-<!--             </div> -->
-<!--         </div> -->
+            </div>
+        </div>
     </div>
 
 
@@ -49,7 +49,7 @@
  <h2 class="text-centre ">Surah List  </h2>
  <div class="row">
  <div  class="col-lg-3 " ng-repeat="data in surahlist" >
-               <a ng-href="#/surah/{{data.surahnumber}}"><span class="label label-default "> {{data.surahnumber}} - {{data.surahname}} :   	{{data.translation}}</span> </a>
+               <a ng-href="#/surah/{{data.surahnumber}}"><span class="label label-default mediumfont"> {{data.surahnumber}} - {{data.surahname}} :   	{{data.translation}}</span> </a>
              
               
                 </div>

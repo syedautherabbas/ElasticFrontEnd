@@ -156,5 +156,21 @@ font-size: 22pt;
 }
 
 .versechapter{
- font-size: 22pt;   
+ font-size: 15pt;   
+}
+
+
+
+.mediumfont{
+	
+font-size: 10px;	
+	
+}
+
+
+.bgltblue
+{
+	background-color: #E0FFFF;
+	padding: 20px;
+	
 }
