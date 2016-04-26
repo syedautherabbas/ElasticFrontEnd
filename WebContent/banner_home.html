@@ -7,7 +7,7 @@
                     <div class="clearfix" >
                 <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
                     <li data-thumb="img/thumb/cS-1.jpg"> 
-                        <img src="img/cS-1.jpg" />
+                        <img src="./Ang-data/img/cS-1.jpg" />
                          </li>
                    <!--  <li data-thumb="img/thumb/cS-2.jpg"> 
                         <img src="img/cS-2.jpg" />
@@ -23,33 +23,35 @@
   </div>
     <!-- Middle content section -->
     <div class="middle">
-        <div class="container" >
+<!--         <div class="container" > -->
       
-            <div class="col-md-4">
-                <h2>Ayat Lookup</h2>
-                <div class="spacetop">
-                <div class="row "> 
-             <div> <label>Chapter</label><select class="pulldown " ng-model="ayat.chapter"> <option> 1 </option> <option> 2 </option> </select>  </div>
-             <br> <br>
-              <div class="row pullrt1"> 
-                <label>Verse</label><select class="pulldown " ng-model="ayat.verse" > <option> 1 </option><option> 2 </option> </select> </div> </div>
-              <br> 
-             <div class="row pullrt2">  <input type="submit" class="btn btn-danger " value="Read" ng-click="displaychapter()"> </input> </div>
-             </div>
-            </div>
-                  <div class="col-md-8 content">
+<!--             <div class="col-md-4"> -->
+<!--                 <h2>Ayat Lookup</h2> -->
+<!--                 <div class="spacetop"> -->
+<!--                 <div class="row ">  -->
+<!--              <div> <label>Chapter : </label><input type="text" ng-model="ayat.chapter"></input>  </div> -->
+<!--              <br> <br> -->
+<!--               <div class="row pullrt1">  -->
+<!--                 <label>Verse</label><input type="text" ng-model="ayat.verse"></input></div> </div> -->
+<!--               <br>  -->
+<!--              <div class="row pullrt2">  <input type="submit" class="btn btn-danger " value="Read" ng-click="displaychapter()"> </input> </div> -->
+<!--              </div> -->
+<!--             </div> -->
+<!--                   <div class="col-md-8 content"> -->
            
            
-            </div>
-        </div>
+<!--             </div> -->
+<!--         </div> -->
     </div>
 
 
-<div>
- <h2>Surah List</h2>
- <div  ng-repeat="data in surahlist">
-               <p><b>Chapter no: {{data.surahnumber}}   Surah Name: {{data.surahname}} --   Transliteration: </b>{{data.translation}} </p>
+<div class="container">
+ <h2 class="text-centre ">Surah List  </h2>
+ <div class="row">
+ <div  class="col-lg-3 " ng-repeat="data in surahlist" >
+               <a ng-href="#/surah/{{data.surahnumber}}"><span class="label label-default "> {{data.surahnumber}} - {{data.surahname}} :   	{{data.translation}}</span> </a>
              
               
+                </div>
                 </div>
 </div>

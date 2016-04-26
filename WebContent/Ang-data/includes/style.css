@@ -141,3 +141,20 @@ background: #BCD2EE;
  color:#CCC;
 
 }
+
+
+.inline
+{
+    display: inline;
+}
+
+.arabicdisplay{
+
+    font-family:Droid Arabic Naskh;
+font-size: 22pt;
+ 
+}
+
+.versechapter{
+ font-size: 22pt;   
+}

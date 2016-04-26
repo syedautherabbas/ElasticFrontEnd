@@ -2,14 +2,20 @@
         <div class="container" >
       
          
-                  <div class="col-md-12 content">
+                  
            
-           <h2>Surah List</h2>
- <div  ng-repeat="data in ayatlist">
-               <p><b>Chapter no: {{data.chapter}}   Ayat number Name: {{data.verse}} --   Ayat: </b>{{data.ayat}} </p>
-             
-              
+           <h2 class="text-center">Surah : {{surah.surahname}}  </h2>
+ <div  ng-repeat="data in ayatlist" class="row">
+ 
+               
+               
+ <div class="col-md-8 versechapter"> {{data.verse}}:{{data.chapter}}   {{data.translation}}</div>            
+             <div class="arabicdisplay col-md-4 text-right"><b> {{data.ayat}}   </b>    </div>
                 </div>
+              
+ 
+           
+ </div>               
             </div>
         </div>
     
