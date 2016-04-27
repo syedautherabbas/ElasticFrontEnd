@@ -24,11 +24,10 @@
     <!-- Middle content section -->
     <div class="middle">
         <div class="container" >
-      
+      <div class="row">
             <div class="col-md-4">
                 <h2>Ayat Lookup</h2>
-                <div class="spacetop">
-                <div class="row "> 
+               
                <div class="form-group">
   <label for="sel1">Chapter :</label>
   <select class="form-control" id="sel1" ng-model="ayat.chapter" ng-change="onsurahselect()">
@@ -47,21 +46,37 @@
 
               <br> 
              <div class="row pullrt2">   <a ng-href="#/surah/{{ayat.chapter}}/ayat/{{ayat.verse}}" class="btn btn-danger " value="Read" ng-click="displaychapter()"> Read</a> </div>
-             </div>
-            </div>
-                  <div class="col-md-8 content">
+           </div>
            
+                  <div class="col-md-8 ">
            
-            </div>
-        </div>
-    </div>
+               
+ <div   class="row panel bgltblue" >
+ 
+               <div> <p class="h1 text-center padding-bottom"> Featured Ayat</p></div>
+                       <div class="arabicdisplay row text-right"><b> {{ayat.ayat}}   </b>    </div>
+                       
+                               <div class="arabicdisplay row text-right"> </div>
+ <div class="row versechapter">{{ayat.chapter}}: {{ayat.verse}}   {{ayat.translation}}</div>  
+<!--   <div class="arabicdisplay row "> Noor-e-iman Tafseer text </div>           -->
+     
+                </div>
 
 
-<div class="container">
- <h2 class="text-centre ">Surah List  </h2>
+
+
+            </div>
+       
+   </div>
+  
+
+<div class="container"  >
+ <h2 class="text-center bold success">Surah List  </h2>
  <div class="row">
- <div  class="col-lg-3 " ng-repeat="data in surahlist" >
-               <a ng-href="#/surah/{{data.surahnumber}}"><span class="label label-default mediumfont"> {{data.surahnumber}} - {{data.surahname}} :   	{{data.translation}}</span> </a>
+ <div  class="col-lg-4 "  ng-class="{surahnamefocus: hover}" 
+    ng-mouseenter="hover = true"
+    ng-mouseleave="hover = false" ng-repeat="data in surahlist" >
+            <a ng-href="#/surah/{{data.surahnumber}}"><span class="text-uppercase  mediumfont surahicons"> <div class="text-center"> {{data.surahnumber}} </div> <div class="text-center"> {{data.surahname}} </div> <div class="text-center"> </div> <div class="text-center">{{data.translation}}</div>     	</span> </a>
              
               
                 </div>

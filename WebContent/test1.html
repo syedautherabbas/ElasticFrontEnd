@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <!-- Include bootstrap CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/droidarabickufi.css">
+    <link href="Ang-data/includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Ang-data/includes/style.css" rel="stylesheet">
+      <link rel="stylesheet"  href="Ang-data/includes/slider/lightslider.css"/>
+</head>
+ <script src="/Ang-data/includes/jquery/jquery-2.1.0.min.js"></script>
+    <script src="Ang-data/includes/slider/lightslider.js"></script> 
+    <script src="Ang-data/includes/bootstrap/js/bootstrap.min.js"></script>
+   <script src="Ang-data/includes/js/userscripts.js"></script>
+     <script src="Ang-data/includes/js/angular.min.js"></script>
+     <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+<script src = "Ang-data/includes/js/angular-ui-router.js"></script>
+
+<script src="Ang-data/includes/controllers/controller.js"></script>
+<body>
+<div class="container" ng-controller="AppCtrl">
+    <!-- Site header and navigation -->
+  
+
+   <h2 class="text-centre ">Surah List  </h2>
+ <div class="row">
+ <div  class="col-lg-3 " ng-repeat="data in surahlist" >
+ 
+               <a ng-href="#/surah/{{data.surahnumber}}"><span class="label label-default mediumfont surahicons"> <div>{{data.surahnumber}} - {{data.surahname}} </div> <div> </div> <div>{{data.translation}}</div>     	</span> </a>
+            
+              
+                </div>
+                </div>
+
+    <!-- Include jQuery and bootstrap JS plugins -->
+ 
+</div>
+</body>
+</html>
