@@ -185,8 +185,8 @@ margin:10pt;
 
 .surahicons{
 	
-	display:inline-block;
-	padding: 20px;
+	display:inline;
+	padding-bottom: 20px;
 	border:20px;
 	margin:10pt;
 	font-color:white;

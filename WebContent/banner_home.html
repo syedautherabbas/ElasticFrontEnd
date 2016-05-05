@@ -1,26 +1,7 @@
 <!-- Site banner -->
 
 
-    <div class="banner">
-        <div class="container">
-           <div class="demo">
-                    <div class="clearfix" >
-                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                    <li data-thumb="img/thumb/cS-1.jpg"> 
-                        <img src="./Ang-data/img/cS-1.jpg" />
-                         </li>
-                   <!--  <li data-thumb="img/thumb/cS-2.jpg"> 
-                        <img src="img/cS-2.jpg" />
-                         </li>
-                    <li data-thumb="img/thumb/cS-2.jpg"> 
-                        <img src="img/cS-3.jpg" />
-                         </li> -->
-                    
-                </ul>
-            </div>
-            </div>
-    </div>
-  </div>
+
     <!-- Middle content section -->
     <div class="middle">
         <div class="container" >
@@ -30,36 +11,25 @@
                
                <div class="form-group">
   <label for="sel1">Chapter :</label>
-  <select class="form-control" id="sel1" ng-model="ayat.chapter" ng-change="onsurahselect()">
-    <option ng-repeat="surah in surahlist">{{surah.surahnumber}} </option>
+  <input type="text" class="form-control" id="sel1" ng-model="orderdata" ng-keyup="onorderupdate()">
+    
  
-  </select>
+  
 </div>
 
-<div class="form-group">
-  <label for="sel2">Verse:</label>
-  <select class="form-control" id="sel2" ng-model="ayat.verse" ng-change="onverseSelect()">
-    <option ng-repeat="verse in ayatlist">{{verse.verse}}</option>
- 
-  </select>
-</div>
 
               <br> 
-             <div class="row pullrt2">   <a ng-href="#/surah/{{ayat.chapter}}/ayat/{{ayat.verse}}" class="btn btn-danger " value="Read" ng-click="displaychapter()"> Read</a> </div>
-           </div>
+            </div>
            
                   <div class="col-md-8 ">
            
                
  <div   class="row panel bgltblue" >
  
-               <div> <p class="h1 text-center padding-bottom"> Featured Ayat</p></div>
-                       <div class="arabicdisplay row text-right"><b> {{ayat.ayat}}   </b>    </div>
+               <div> <p class="h1 text-center padding-bottom"> Result </p></div>
+                    <div  ng-repeat="data in elasticresponse" class="row panel bgltblue">
                        
-                               <div class="arabicdisplay row text-right"> </div>
- <div class="row versechapter">{{ayat.chapter}}: {{ayat.verse}}   {{ayat.translation}}</div>  
-<!--   <div class="arabicdisplay row "> Noor-e-iman Tafseer text </div>           -->
-     
+                           <div class="arabicdisplay row text-right"><b> Product: {{data._source.productname}} Supplier: {{data._source.supplier}} Date: {{data._source.time}} </b>    </div>
                 </div>
 
 
@@ -69,16 +39,4 @@
        
    </div>
   
-
-<div class="container"  >
- <h2 class="text-center bold success">Surah List  </h2>
- <div class="row">
- <div  class="col-lg-4 "  ng-class="{surahnamefocus: hover}" 
-    ng-mouseenter="hover = true"
-    ng-mouseleave="hover = false" ng-repeat="data in surahlist" >
-            <a ng-href="#/surah/{{data.surahnumber}}"><span class="text-uppercase  mediumfont surahicons"> <div class="text-center"> {{data.surahnumber}} </div> <div class="text-center"> {{data.surahname}} </div> <div class="text-center"> </div> <div class="text-center">{{data.translation}}</div>     	</span> </a>
-             
-              
-                </div>
-                </div>
 </div>
